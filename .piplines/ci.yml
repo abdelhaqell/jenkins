@@ -1,0 +1,9 @@
+pool: 
+  vmImage: 'ubuntu-latest'
+ 
+stages:
+- stage: BUILD_MVN_APP
+  jobs:
+  - job: BUILD_MVN_APP_JOB
+    steps:
+ 
