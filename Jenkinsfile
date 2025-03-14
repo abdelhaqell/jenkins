@@ -21,7 +21,7 @@ pipeline {
                 
                     getcheckoutgroovy(
                         branch: 'main',
-                        url:'https://github.com/abdelhaqell/test_jenkins.git'
+                        url:'https://github.com/abdelhaqell/jenkins.git'
                         )
                 
             }
@@ -60,7 +60,7 @@ pipeline {
         stage('Login to Docker Registry') {
             steps {
                 script {
-                    withCredentials([usernamePassword(credentialsId: 'id2', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
+                    withCredentials([usernamePassword(credentialsId: 'id3', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
                         sh "echo ${DOCKER_PASS} | docker login -u ${DOCKER_USER} --password-stdin"
                     }
                 }
